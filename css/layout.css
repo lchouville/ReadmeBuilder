@@ -1,0 +1,29 @@
+/* layout.css */
+/* Center content like a scrollable A4 page (responsive) */
+
+main {
+  width: 70vw;             /* relative to viewport width */
+  min-height: 90vh;        /* relative to viewport height */
+  margin: 0 auto;          /* center horizontally */
+  padding: 4vh 4vw;        /* adapt padding */
+  background-color: #fff;  /* white paper effect */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0f0f0;
+  overflow-y: auto;        /* vertical scroll */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2vh;
+}
