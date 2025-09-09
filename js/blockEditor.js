@@ -1,6 +1,7 @@
 // blockEditor.js
 import { updateBlock } from './data.js';
 import { renderAll } from './app.js';
+import { renderBlock } from './blocks.js';
 
 export function enableBlockEditing(blockElement, blockData, onEditEnd) {
   const form = document.createElement("form");
@@ -63,7 +64,7 @@ export function enableBlockEditing(blockElement, blockData, onEditEnd) {
     // Appeler le callback pour indiquer que l'édition est terminée
     if (onEditEnd) onEditEnd();
 
-    renderAll();
+    renderBlock(blockData.id);
   });
 
   // Cancel handler
@@ -71,7 +72,7 @@ export function enableBlockEditing(blockElement, blockData, onEditEnd) {
     // Appeler le callback pour indiquer que l'édition est terminée
     if (onEditEnd) onEditEnd();
 
-    renderAll();
+    renderBlock(blockData.id);
   });
 
   // Auto focus on textarea

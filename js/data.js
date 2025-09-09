@@ -3,6 +3,11 @@
 
 let blocks = [];
 
+export function getBlockById(blockId) {
+  // Logique pour récupérer le bloc depuis tes données
+  return blocks.find(block => block.id === blockId);
+}
+
 // Default type mapping (more extensible)
 const defaultTagByType = {
   title: "h1",
@@ -11,7 +16,6 @@ const defaultTagByType = {
 
 function saveToLocalStorage() {
   localStorage.setItem("readmeBuilderBlocks", JSON.stringify(blocks));
-  console.log(JSON.stringify(blocks));
 }
 
 export function loadLocalStorage() {

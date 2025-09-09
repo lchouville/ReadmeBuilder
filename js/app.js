@@ -5,6 +5,7 @@ import { renderBlocks } from './blocks.js';
 import { createAddButton } from './addButton.js';
 import { exportJSON, importJSON } from './jsonManager.js';
 import { loadLocalStorage } from './data.js';
+import { loadTheme, toggleTheme } from './themes.js';
 
 const main = document.getElementById("main");
 
@@ -12,7 +13,6 @@ export function renderAll() {
   const addButtonElement = createAddButton(() => renderAll());
   renderBlocks(main, addButtonElement);
 }
-
 
 // Connect JSON buttons
 document.getElementById("exportJSON").addEventListener("click", exportJSON);
@@ -23,7 +23,9 @@ document.getElementById("importJSON").addEventListener("change", (e) => {
     importJSON(file, () => renderAll());
   }
 });
-
 // Initial render
 loadLocalStorage();
+// load themes and button action
+loadTheme();
+document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
 renderAll();
