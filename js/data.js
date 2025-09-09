@@ -8,6 +8,12 @@ export function getBlockById(blockId) {
   return blocks.find(block => block.id === blockId);
 }
 
+export function replaceBlocks(newBlocks) {
+  blocks.length = 0;         // vide l’array
+  blocks.push(...newBlocks); // copie les nouveaux blocs
+  localStorage.setItem("readmeBuilderBlocks", JSON.stringify(blocks));
+}
+
 // Default type mapping (more extensible)
 const defaultTagByType = {
   title: "h1",
