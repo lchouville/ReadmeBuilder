@@ -8,8 +8,6 @@
 
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
   padding: 20px;
 }
 
@@ -20,5 +18,4 @@ header {
 header h1 {
   font-weight: 600;
   font-size: 28px;
-  color: #222;
 }
