@@ -1,6 +1,6 @@
 <h1>
   <a href="/Documents/Specifications.md"><img src="https://img.icons8.com/color/48/000000/great-britain-circular.png" width="30" alt="English"/></a>
-  <a href="/Documents/fr/CahierDesCharges.md"><img src="https://img.icons8.com/color/48/000000/france-circular.png" width="30" alt="Français"/></a> 
+  <a href="/Documents/Specifications-fr.md"><img src="https://img.icons8.com/color/48/000000/france-circular.png" width="30" alt="Français"/></a> 
   Cahier des Charges – Outil de Création de README.md
 </h1>
 
@@ -20,9 +20,9 @@ L’utilisateur pourra construire son document **bloc par bloc**, gérer plusieu
 - **Types de blocs disponibles**  
   - Titres (h1 → h6) avec niveau modifiable.  
   - Paragraphe (texte simple avec mise en forme Markdown).  
+  - Texte formaté : **gras**, *italique*, ~~barré~~, `code`.  
   - Listes : ordonnées (1.) et non ordonnées (-).  
   - Code : bloc avec *syntax highlighting* (langage sélectionnable).  
-  - Texte formaté : gras, italique, barré.  
   - Images (upload ou URL avec alt).  
   - Liens (texte cliquable + URL).  
   - Tableaux (Markdown).  
@@ -42,14 +42,11 @@ L’utilisateur pourra construire son document **bloc par bloc**, gérer plusieu
       "type": "header",
       "level": 1,
       "content": "Titre principal",
-      "color": "#000000",
-      "background": "#FFFFFF"
     },
     {
       "id": "block_2",
       "type": "paragraph",
-      "content": "Un paragraphe avec du **gras** et *italique*.",
-      "formats": ["bold", "italic"]
+      "content": "Un paragraphe avec du **gras**, *italique*, ~~barré~~ et `code`.",
     },
     {
       "id": "block_3",
